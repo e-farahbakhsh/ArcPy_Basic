@@ -7,14 +7,14 @@
 # Python window
 
 # import arcpy
-# arcpy.env.workspace = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python"
+# arcpy.env.workspace = "path"
 # arcpy.AddField_management("Geology_StudyArea.shp", "test", "TEXT", "", "", 50, "test_alias", "NULLABLE")
 # --------------------------------------------------------------------------------------------------------
 # Stand-alone script
 
 # import arcpy
-# arcpy.env.workspace = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python"
-# in_table1 = "Geology_StudyArea.shp"
+# arcpy.env.workspace = "path"
+# in_table1 = "fileName"
 # field_name1 = "test"
 # field_precision1 = 9
 # field_length1 = 50
@@ -30,19 +30,19 @@
 # Python window
 
 # import arcpy
-# arcpy.env.workspace = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python"
-# Copy1 = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python/Geology_StudyArea_Copy.shp"
+# arcpy.env.workspace = "path"
+# Copy1 = "path1"
 # Syntax: CopyFeatures_management(in_features, out_feature_class, {config_keyword}, {spatial_grid_1}, {spatial_grid_2},
 #                                {spatial_grid_3})
-# arcpy.CopyFeatures_management("Geology_StudyArea.shp", Copy1)
+# arcpy.CopyFeatures_management("fileName", Copy1)
 # arcpy.DeleteField_management(Copy1, ["test"])
 # -------------------------------------------
 # Stand-alone script
 
 import arcpy
-arcpy.env.workspace = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python"
-inFeatures = "Geology_StudyArea.shp"
-outFeatureClass = "D:/PhD-AUT/Thesis/Phase 01_Regional Scale/Geology/Python/Geology_StudyArea_Copy.shp"
+arcpy.env.workspace = "path"
+inFeatures = "fileName"
+outFeatureClass = "path1"
 dropFields = ["test"]
 
 arcpy.CopyFeatures_management(inFeatures, outFeatureClass)
