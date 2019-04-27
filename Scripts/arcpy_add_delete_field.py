@@ -1,8 +1,8 @@
 # Adding new fields
 
-# Syntax: AddField_management (in_table, field_name, field_type, {field_precision},\
-#                             {field_scale}, {field_length}, {field_alias}, {field_is_nullable},\
-#                             {field_is_required}, {field_domain})
+# Syntax: AddField_management(in_table, field_name, field_type, {field_precision},\
+#                            {field_scale}, {field_length}, {field_alias}, {field_is_nullable},\
+#                            {field_is_required}, {field_domain})
 # ----------------------------------------------------------------
 # Python window
 
@@ -25,7 +25,7 @@
 # -------------------------------------------------------
 # Deleting fields
 
-# Syntax: DeleteField_management (in_table, drop_field)
+# Syntax: DeleteField_management(in_table, drop_field)
 # -----------------------------------------------------
 # Python window
 
