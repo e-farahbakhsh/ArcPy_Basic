@@ -36,7 +36,7 @@
 #                                {spatial_grid_3})
 # arcpy.CopyFeatures_management("fileName", Copy1)
 # arcpy.DeleteField_management(Copy1, ["test"])
-# -------------------------------------------
+# ---------------------------------------------
 # Stand-alone script
 
 import arcpy
