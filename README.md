@@ -1,2 +1,2 @@
 # ArcPy_Basic
-Basic tools based on ArcPy site package
+Basic GIS tools based on ArcPy site package
