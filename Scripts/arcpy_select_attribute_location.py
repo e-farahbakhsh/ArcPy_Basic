@@ -1,5 +1,5 @@
 # Selecting by attribute
-
+#
 # Syntax: SelectLayerByAttribute_management (in_layer_or_view, {selection_type}, {where_clause})
 # ----------------------------------------------------------------------------------------------
 # import arcpy
@@ -9,7 +9,7 @@
 # arcpy.CopyFeatures_management("layerName", "fileName1")
 # ------------------------------------------------------------------------------------
 # Selecting by location
-
+#
 # Syntax: SelectLayerByLocation_management (in_layer, {overlap_type}, {select_features}, {search_distance},
 #                                          {selection_type}, {invert_spatial_relationship})
 # -----------------------------------------------------------------------------------------
