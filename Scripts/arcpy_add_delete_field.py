@@ -3,13 +3,13 @@
 # Syntax: AddField_management(in_table, field_name, field_type, {field_precision},\
 #                            {field_scale}, {field_length}, {field_alias}, {field_is_nullable},\
 #                            {field_is_required}, {field_domain})
-# ----------------------------------------------------------------
+# ---------------------------------------------------------------
 # Python window
 #
 # import arcpy
 # arcpy.env.workspace = "path"
 # arcpy.AddField_management("fileName", "test", "TEXT", "", "", 50, "test_alias", "NULLABLE")
-# --------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------
 # Stand-alone script
 #
 # import arcpy
@@ -26,7 +26,7 @@
 # Deleting fields
 #
 # Syntax: DeleteField_management(in_table, drop_field)
-# -----------------------------------------------------
+# ----------------------------------------------------
 # Python window
 #
 # import arcpy
@@ -36,7 +36,7 @@
 #                                {spatial_grid_3})
 # arcpy.CopyFeatures_management("fileName", copy1)
 # arcpy.DeleteField_management(copy1, ["fieldName"])
-# ---------------------------------------------
+# --------------------------------------------------
 # Stand-alone script
 
 import arcpy
