@@ -1,17 +1,17 @@
 # Adding new fields
-
+#
 # Syntax: AddField_management(in_table, field_name, field_type, {field_precision},\
 #                            {field_scale}, {field_length}, {field_alias}, {field_is_nullable},\
 #                            {field_is_required}, {field_domain})
 # ----------------------------------------------------------------
 # Python window
-
+#
 # import arcpy
 # arcpy.env.workspace = "path"
 # arcpy.AddField_management("Geology_StudyArea.shp", "test", "TEXT", "", "", 50, "test_alias", "NULLABLE")
 # --------------------------------------------------------------------------------------------------------
 # Stand-alone script
-
+#
 # import arcpy
 # arcpy.env.workspace = "path"
 # in_table1 = "fileName"
@@ -24,11 +24,11 @@
 #                           field_is_nullable="NULLABLE")
 # -------------------------------------------------------
 # Deleting fields
-
+#
 # Syntax: DeleteField_management(in_table, drop_field)
 # -----------------------------------------------------
 # Python window
-
+#
 # import arcpy
 # arcpy.env.workspace = "path"
 # Copy1 = "path1"
