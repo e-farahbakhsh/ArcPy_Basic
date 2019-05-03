@@ -4,12 +4,12 @@
 # ---------------------------------------------------
 # import arcpy
 #
-# rows = arcpy.InsertCursor("D:/Python/Test/Vector/Geology_StudyArea.shp")
+# rows = arcpy.InsertCursor("path")
 #
 # for i in range(1, 3):
 #     row = rows.newRow()
-#     row.setValue("Age_era", "Cenozoic")
-#     row.setValue("Age_period", "Quaternary")
+#     row.setValue("field1", "value1")
+#     row.setValue("field2", "value2")
 #     rows.insertRow(row)
 #
 # del row
@@ -17,14 +17,14 @@
 # --------
 # Inserting new rows by da.InsertCursor
 
-# Syntax: InsertCursor (in_table, field_names)
-# --------------------------------------------
+# Syntax: da.InsertCursor (in_table, field_names)
+# -----------------------------------------------
 import arcpy
 
-fields = ["Age_era", "Age_period"]
-cursor = arcpy.da.InsertCursor("D:/Python/Test/Vector/Geology_StudyArea.shp", fields)
+fields = ["field1", "field2"]
+cursor = arcpy.da.InsertCursor("path", fields)
 
 for i in range(1, 3):
-    cursor.insertRow(("Cenozoic", "Quaternary"))
+    cursor.insertRow(("value1", "value2"))
 
 del cursor
