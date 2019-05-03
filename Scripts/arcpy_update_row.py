@@ -5,13 +5,13 @@
 # Using UpdateCursor with a for loop
 #
 # import arcpy
-# arcpy.env.workspace = "D:/Python/Test/Vector"
+# arcpy.env.workspace = "path"
 #
-# fileName = "Geology_StudyArea.shp"
+# fileName = "fileName"
 # arcpy.AddField_management(fileName, "era_period", "TEXT", "", "", 50, "era_period_alias", "NULLABLE")
-# field1 = "Age_era"
-# field2 = "Age_period"
-# field3 = "era_period"
+# field1 = "fieldName1"
+# field2 = "fieldName2"
+# field3 = "fieldName3"
 #
 # cursor = arcpy.UpdateCursor(fileName)
 # for row in cursor:
@@ -24,13 +24,13 @@
 # Using UpdateCursor with a while loop
 #
 # import arcpy
-# arcpy.env.workspace = "D:/Python/Test/Vector"
+# arcpy.env.workspace = "path"
 #
-# fileName = "Geology_StudyArea.shp"
+# fileName = "fileName"
 # arcpy.AddField_management(fileName, "era_period", "TEXT", "", "", 50, "era_period_alias", "NULLABLE")
-# field1 = "Age_era"
-# field2 = "Age_period"
-# field3 = "era_period"
+# field1 = "fieldName1"
+# field2 = "fieldName2"
+# field3 = "fieldName3"
 #
 # cursor = arcpy.UpdateCursor(fileName)
 # row = cursor.next()
@@ -47,11 +47,11 @@
 # Syntax: UpdateCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
 # --------------------------------------------------------------------------------------------------------------------
 import arcpy
-arcpy.env.workspace = "D:/Python/Test/Vector"
+arcpy.env.workspace = "path"
 
-fileName = "Geology_StudyArea.shp"
+fileName = "fileName"
 arcpy.AddField_management(fileName, "era_period", "TEXT", "", "", 50, "era_period_alias", "NULLABLE")
-fields = ['Age_era', 'Age_period', "era_period"]
+fields = ["field1", "field2", "field3"]
 
 with arcpy.da.UpdateCursor(fileName, fields) as cursor:
     for row in cursor:
