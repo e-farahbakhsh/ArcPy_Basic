@@ -42,10 +42,10 @@
 #     cursor.updateRow(row)
 #     row = cursor.next()
 # -----------------------
-# Updating rows by UpdateCursor
+# Updating rows by da.UpdateCursor
 #
-# Syntax: UpdateCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
-# --------------------------------------------------------------------------------------------------------------------
+# Syntax: da.UpdateCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
+# -----------------------------------------------------------------------------------------------------------------------
 import arcpy
 arcpy.env.workspace = "path"
 
