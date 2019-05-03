@@ -14,7 +14,7 @@
 # for row in cursor:
 #     if row.getValue(field) != ' ':
 #         print(row.getValue(field))
-# --------------------------------
+# ----------------------------------
 # Using SearchCursor with a while loop
 #
 # import arcpy
@@ -46,8 +46,8 @@
 # ----------------------------------------
 # Reading records by da.SearchCursor
 #
-# Syntax: SearchCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
-# --------------------------------------------------------------------------------------------------------------------
+# Syntax: da.SearchCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
+# -----------------------------------------------------------------------------------------------------------------------
 # import arcpy
 # arcpy.env.workspace = "path"
 #
@@ -57,7 +57,7 @@
 # with arcpy.da.SearchCursor(fileName, fields) as cursor:
 #     for row in cursor:
 #         print(u"{0}: {1}".format(row[0], row[1]))
-# -----------------------------------------------
+# -------------------------------------------------
 import arcpy
 arcpy.env.workspace = "path"
 
