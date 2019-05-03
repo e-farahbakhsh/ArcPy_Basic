@@ -7,7 +7,7 @@
 # arcpy.MakeFeatureLayer_management("fileName", "layerName")
 # arcpy.SelectLayerByAttribute_management("layerName", "NEW_SELECTION", "fieldName = 'Value'")
 # arcpy.CopyFeatures_management("layerName", "fileName1")
-# ------------------------------------------------------------------------------------
+# -------------------------------------------------------
 # Selecting by location
 #
 # Syntax: SelectLayerByLocation_management (in_layer, {overlap_type}, {select_features}, {search_distance},
