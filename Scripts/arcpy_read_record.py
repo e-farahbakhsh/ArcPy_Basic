@@ -5,10 +5,10 @@
 # Using SearchCursor with a for loop
 #
 # import arcpy
-# arcpy.env.workspace = "D:/Python/Test/Vector"
+# arcpy.env.workspace = "path"
 #
-# fileName = "Geology_StudyArea.shp"
-# field = "Age_era"
+# fileName = "fileName"
+# field = "fieldName"
 #
 # cursor = arcpy.SearchCursor(fileName)
 # for row in cursor:
@@ -18,10 +18,10 @@
 # Using SearchCursor with a while loop
 #
 # import arcpy
-# arcpy.env.workspace = "D:/Python/Test/Vector"
+# arcpy.env.workspace = "path"
 #
-# fileName = "Geology_StudyArea.shp"
-# field = "Age_era"
+# fileName = "fileName"
+# field = "fieldName"
 #
 # cursor = arcpy.SearchCursor(fileName)
 # row = cursor.next()
@@ -34,38 +34,38 @@
 #
 # import arcpy
 #
-# rows = arcpy.SearchCursor("D:/Python/Test/Vector/Geology_StudyArea.shp",
-#                           fields="Age_era; Age_period",
-#                           sort_fields="Age_era A")
+# rows = arcpy.SearchCursor("path",
+#                           fields="fieldName1; fieldName2",
+#                           sort_fields="fieldName1 A")
 #
 # for row in rows:
-#     if row.getValue("Age_era") != ' ' and row.getValue("Age_period") != ' ':
-#         print("Age_era: {0}, Age_period: {1}".format(
-#             row.getValue("Age_era"),
-#             row.getValue("Age_period")))
+#     if row.getValue("fieldName1") != ' ' and row.getValue("fieldName2") != ' ':
+#         print("fieldName1: {0}, fieldName2: {1}".format(
+#             row.getValue("fieldName1"),
+#             row.getValue("fieldName2")))
 # ----------------------------------------
 # Reading records by da.SearchCursor
 #
 # Syntax: SearchCursor (in_table, field_names, {where_clause}, {spatial_reference}, {explode_to_points}, {sql_clause})
 # --------------------------------------------------------------------------------------------------------------------
 # import arcpy
-# arcpy.env.workspace = "D:/Python/Test/Vector"
+# arcpy.env.workspace = "path"
 #
-# fileName = "Geology_StudyArea.shp"
-# fields = ["Label", "SHAPE@AREA"]
+# fileName = "fileName"
+# fields = ["fieldName1", "SHAPE@AREA"]
 #
 # with arcpy.da.SearchCursor(fileName, fields) as cursor:
 #     for row in cursor:
 #         print(u"{0}: {1}".format(row[0], row[1]))
 # -----------------------------------------------
 import arcpy
-arcpy.env.workspace = "D:/Python/Test/Vector"
+arcpy.env.workspace = "path"
 
-fileName = "Geology_StudyArea.shp"
+fileName = "fileName"
 
-expression = u"{} <> ' '".format(arcpy.AddFieldDelimiters(fileName, "Label"))
+expression = u"{} <> ' '".format(arcpy.AddFieldDelimiters(fileName, "fieldName"))
 
-with arcpy.da.SearchCursor(fileName, ["Label", "SHAPE@AREA"],
+with arcpy.da.SearchCursor(fileName, ["fieldName", "SHAPE@AREA"],
                            where_clause=expression) as cursor:
     for row in cursor:
         print(u"{0}: {1}".format(row[0], row[1]))
