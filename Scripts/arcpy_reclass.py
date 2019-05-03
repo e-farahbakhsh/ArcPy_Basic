@@ -1,9 +1,9 @@
 # Reclassification
-
+#
 # Syntax: Reclassify(in_raster, reclass_field, remap, {missing_values})
 # ---------------------------------------------------------------------
 # Python window
-
+#
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
