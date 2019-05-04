@@ -1,5 +1,5 @@
 # Inserting new rows by InsertCursor
-
+#
 # Syntax: InsertCursor (dataset, {spatial_reference})
 # ---------------------------------------------------
 # import arcpy
@@ -16,7 +16,7 @@
 # del rows
 # --------
 # Inserting new rows by da.InsertCursor
-
+#
 # Syntax: da.InsertCursor (in_table, field_names)
 # -----------------------------------------------
 import arcpy
