@@ -7,23 +7,23 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# filterOut = Filter("TMI_100m.tif", "HIGH", "NODATA")
-# filterOut.save("D:/Python/Test/Raster/TMI_high.tif")
-# ----------------------------------------------------
+# filterOut = Filter("fileName", "HIGH", "NODATA")
+# filterOut.save("path")
+# ----------------------
 # Stand-alone script
 #
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# inRaster = "TMI_100m.tif"
+# inRaster = "fileName"
 #
 # filterOut = Filter(inRaster, "LOW", "NODATA")
-# filterOut.save("D:/Python/Test/Raster/TMI_low.tif")
-# ---------------------------------------------------
+# filterOut.save("path")
+# ----------------------
 # Calculating a statistic of the values within a specified neighborhood around each input cell location
 #
 # Syntax: FocalStatistics (in_raster, {neighborhood}, {statistics_type}, {ignore_nodata})
@@ -33,21 +33,21 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outFocalStat = FocalStatistics("TMI_100m.tif", NbrRectangle(9, 9, "CELL"),
+# outFocalStat = FocalStatistics("fileName", NbrRectangle(9, 9, "CELL"),
 #                                "STD", "NODATA")
-# outFocalStat.save("D:/Python/Test/Raster/TMI_std.tif")
-# ------------------------------------------------------
+# outFocalStat.save("path")
+# -------------------------
 # Stand-alone script
 #
 import arcpy
 from arcpy import env
 from arcpy.sa import *
-env.workspace = "D:/Python/Test/Raster"
+env.workspace = "path"
 
-inRaster = "TMI_100m.tif"
+inRaster = "fileName"
 neighborhood = NbrRectangle(9, 9, "CELL")
 
 outFocalStatistics = FocalStatistics(inRaster, neighborhood, "MEAN", "NODATA")
-outFocalStatistics.save("D:/Python/Test/Raster/TMI_mean.tif")
+outFocalStatistics.save("path")
