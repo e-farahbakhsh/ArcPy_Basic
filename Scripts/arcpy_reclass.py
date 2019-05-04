@@ -1,6 +1,6 @@
 # Reclassification
 #
-# Syntax: Reclassify(in_raster, reclass_field, remap, {missing_values})
+# Syntax: Reclassify (in_raster, reclass_field, remap, {missing_values})
 # ---------------------------------------------------------------------
 # Python window
 #
