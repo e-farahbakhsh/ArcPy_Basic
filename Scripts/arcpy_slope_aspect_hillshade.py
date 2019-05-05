@@ -7,26 +7,26 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outSlope = Slope("ASTER_UTM40N.tif", "DEGREE")
-# outSlope.save("D:/Python/Test/Raster/ASTER_slope.tif")
+# outSlope = Slope("fileName", "DEGREE")
+# outSlope.save("path1")
 # ------------------------------------------------------
 # Stand-alone script
 #
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# inRaster = "ASTER_UTM40N.tif"
+# inRaster = "fileName"
 # outMeasurement = "DEGREE"
 # zFactor = ""
 # method = "GEODESIC"
 # zUnit = "FOOT"
 #
 # outSlope = Slope(inRaster, outMeasurement, zFactor, method, zUnit)
-# outSlope.save("D:/Python/Test/Raster/ASTER_slope.tif")
+# outSlope.save("path1")
 # ------------------------------------------------------
 # Deriving the aspect from each cell of a raster surface
 #
@@ -37,24 +37,24 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outAspect = Aspect("ASTER_UTM40N.tif")
-# outAspect.save("D:/Python/Test/Raster/ASTER_aspect.tif")
+# outAspect = Aspect("fileName")
+# outAspect.save("path1")
 # --------------------------------------------------------
 # Stand-alone script
 #
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# inRaster = "ASTER_UTM40N.tif"
+# inRaster = "fileName"
 # method = "GEODESIC"
 # zUnit = "FOOT"
 #
 # outAspect = Aspect(inRaster, method, zUnit)
-# outAspect.save("D:/Python/Test/Raster/ASTER_aspect.tif")
+# outAspect.save("path1")
 # --------------------------------------------------------
 # Creating a shaded relief from a surface raster
 #
@@ -65,23 +65,23 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outHillshade = Hillshade("ASTER_UTM40N.tif", 180, 75, "SHADOWS", 1)
-# outHillshade.save("D:/Python/Test/Raster/ASTER_hillshade.tif")
+# outHillshade = Hillshade("fileName", 180, 75, "SHADOWS", 1)
+# outHillshade.save("path1")
 # --------------------------------------------------------------
 # Stand-alone script
 #
 import arcpy
 from arcpy import env
 from arcpy.sa import *
-env.workspace = "D:/Python/Test/Raster"
+env.workspace = "path"
 
-inRaster = "ASTER_UTM40N.tif"
+inRaster = "fileName"
 azimuth = 180
 altitude = 75
 modelShadows = "SHADOWS"
 zFactor = 1
 
 outHillShade = Hillshade(inRaster, azimuth, altitude, modelShadows, zFactor)
-outHillShade.save("D:/Python/Test/Raster/ASTER_hillshade.tif")
+outHillShade.save("path1")
