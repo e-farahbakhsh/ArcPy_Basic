@@ -11,7 +11,7 @@
 #
 # outSlope = Slope("fileName", "DEGREE")
 # outSlope.save("path1")
-# ------------------------------------------------------
+# ----------------------
 # Stand-alone script
 #
 # import arcpy
@@ -27,7 +27,7 @@
 #
 # outSlope = Slope(inRaster, outMeasurement, zFactor, method, zUnit)
 # outSlope.save("path1")
-# ------------------------------------------------------
+# ----------------------
 # Deriving the aspect from each cell of a raster surface
 #
 # Syntax: Aspect (in_raster, {method}, {z_unit})
@@ -41,7 +41,7 @@
 #
 # outAspect = Aspect("fileName")
 # outAspect.save("path1")
-# --------------------------------------------------------
+# -----------------------
 # Stand-alone script
 #
 # import arcpy
@@ -55,7 +55,7 @@
 #
 # outAspect = Aspect(inRaster, method, zUnit)
 # outAspect.save("path1")
-# --------------------------------------------------------
+# -----------------------
 # Creating a shaded relief from a surface raster
 #
 # Syntax: Hillshade (in_raster, {azimuth}, {altitude}, {model_shadows}, {z_factor})
@@ -69,7 +69,7 @@
 #
 # outHillshade = Hillshade("fileName", 180, 75, "SHADOWS", 1)
 # outHillshade.save("path1")
-# --------------------------------------------------------------
+# --------------------------
 # Stand-alone script
 #
 import arcpy
