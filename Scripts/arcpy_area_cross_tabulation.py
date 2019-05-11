@@ -7,9 +7,10 @@
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test"
-# TabulateArea("Vector/Geology_StudyArea.shp", "Geo_unit", "Raster/U_Reclassified.tif", "VALUE",
-#              "D:/Python/Test/Table/table01.dbf", 250)
+# env.workspace = "path"
+#
+# TabulateArea("fileName1", "field1", "fileName2", "field2",
+#              "path1", 250)
 # -----------------------------------------------------
 # Stand-alone script
 #
@@ -17,15 +18,15 @@ import arcpy
 from arcpy import env
 from arcpy.sa import *
 
-env.workspace = "D:/Python/Test"
-env.extent = "Vector/Frame.shp"
-env.snapRaster = "Vector/Frame.shp"
+env.workspace = "path"
+env.extent = "fileName1"
+env.snapRaster = "fileName2"
 
-inZoneData = "Vector/Geology_StudyArea.shp"
-zoneField = "Geo_unit"
-inClassData = "Raster/U_Reclassified.tif"
-classField = "VALUE"
-outTable = "D:/Python/Test/Table/table01.dbf"
+inZoneData = "fileName3"
+zoneField = "field1"
+inClassData = "fileName4"
+classField = "field2"
+outTable = "path1"
 processingCellSize = 250
 
 TabulateArea(inZoneData, zoneField, inClassData, classField, outTable, processingCellSize)
