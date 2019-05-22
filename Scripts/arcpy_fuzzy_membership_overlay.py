@@ -7,26 +7,26 @@
 # import arcpy
 # from arcpy.sa import *
 # from arcpy import env
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outFzyMember = FuzzyMembership("U_UTM40N.tif", FuzzyLarge())
-# outFzyMember.save("D:/Python/Test/Raster/U_Fuzzy.tif")
-# -------------------------------------------------------
+# outFzyMember = FuzzyMembership("fileName", FuzzyLarge())
+# outFzyMember.save("path1")
+# --------------------------
 # Stand-alone script
 #
 # import arcpy
 # from arcpy import env
 # from arcpy.sa import *
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# inRaster = "Th_UTM40N.tif"
+# inRaster = "fileName"
 # # midpoint = 15
 # # spread = 5
 # myFuzzyAlgorithm = FuzzyLarge()
 #
 # outFuzzyMember = FuzzyMembership(inRaster, myFuzzyAlgorithm)
-# outFuzzyMember.save("D:/Python/Test/Raster/Th_Fuzzy.tif")
-# ---------------------------------------------------------
+# outFuzzyMember.save("path1")
+# ----------------------------
 # Combining fuzzy membership rasters data together
 #
 # Syntax: FuzzyOverlay (in_rasters, {overlay_type}, {gamma})
@@ -36,18 +36,18 @@
 # import arcpy
 # from arcpy.sa import *
 # from arcpy import env
-# env.workspace = "D:/Python/Test/Raster"
+# env.workspace = "path"
 #
-# outFzyOverlay = FuzzyOverlay(["Th_Fuzzy.tif", "U_Fuzzy.tif"], "GAMMA", 0.95)
-# outFzyOverlay.save("D:/Python/Test/Raster/Th_U_Gamma.tif")
+# outFzyOverlay = FuzzyOverlay(["fileName1", "fileName2"], "GAMMA", 0.95)
+# outFzyOverlay.save("path1")
 # ----------------------------------------------------------
 # Stand-alone script
 #
 import arcpy
 from arcpy import env
 from arcpy.sa import *
-env.workspace = "D:/Python/Test/Raster"
+env.workspace = "path"
 
-inRasterList = ["Th_Fuzzy.tif", "U_Fuzzy.tif"]
+inRasterList = ["fileName1", "fileName2"]
 outFzyOverlay = FuzzyOverlay(inRasterList, "GAMMA", 0.75)
-outFzyOverlay.save("D:/Python/Test/Raster/Th_U_Gamma.tif")
+outFzyOverlay.save("path1")
